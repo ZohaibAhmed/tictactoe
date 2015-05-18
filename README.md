@@ -5,7 +5,7 @@ A simple tic tac toe game built with Flask, with Flux and Reactjs on the fronten
 ## Setting it up on your Environment:
 
 1. Clone the repo,
-2. Make sure you have Flask installed
+2. Make sure you have Redis installed
 3. In the root directory, run `pip install -r requirements.txt`
 4. In the root directory, run `npm install`
 5. In the root directory, run `bower install`
