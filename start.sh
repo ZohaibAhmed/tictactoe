@@ -1,2 +1,2 @@
 #!/bin/bash
-python tictactoe/app.py
+python tictactoe/ttt.py
