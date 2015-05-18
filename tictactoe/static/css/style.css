@@ -1,0 +1,56 @@
+/* custom styles */
+
+html, body {
+  height: 100%;
+}
+
+.title span {
+  font-weight: normal;
+  font-style: italic;
+  color: #EAEAEA;
+}
+
+.container {
+  text-align: center;
+  max-width: 630px;
+}
+
+input{
+  text-align: center;
+  border: 5px solid;
+  padding: 13px 12px;
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+ul{
+  margin-left: 20px;
+  text-align: left;
+}
+
+.status-x {
+  background: #E9FF8D;
+}
+.status-o {
+  background: #A3CBFF;
+}
+
+#Game {
+  width: 600px;
+  height: 600px;
+  padding: 0;
+  margin-bottom: 20px;
+  float: left;
+  outline: 1px solid #b4b4b4;
+}
+
+#Game .tile {
+  width: 200px;
+  height: 200px;
+  outline: 1px solid #EAEAEA;
+  float: left;
+  line-height: 160px;
+  text-align: center;
+  font-size: 200px;
+}
