@@ -26,6 +26,7 @@ var TicTacToe = React.createClass({
   },
 
   tileClick: function(position, player) {
+    // Make sure that this only occurs on tiles that aren't occupied, and the game is still in a valid state
     if (!TicTacToeStore.isOccupied(position) && !TicTacToeStore.getWinner() && TicTacToeStore.getPlayer() == 'x') {
       TicTacToeActions.playPosition(position); // play position
       this.setState({tiles: TicTacToeStore.getBoard(), currentPlayer: TicTacToeStore.getPlayer()});

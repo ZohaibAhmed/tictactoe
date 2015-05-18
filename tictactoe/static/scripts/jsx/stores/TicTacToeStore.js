@@ -1,6 +1,5 @@
 var AppDispatcher = require('../dispatcher/AppDispatcher');
 var AppConstants = require('../constants/AppConstants')
-var TicTacToeApi = require('../utils/TicTacToeApi');
 var EventEmitter = require('events').EventEmitter;
 var assign = require('object-assign');
 
