@@ -10,9 +10,13 @@ var Menu = React.createClass({
   render: function() {
   	var winner = TicTacToeStore.getWinner();
   	var winnerStatement;
-
+    
   	if (winner) {
-  		winnerStatement = "RESULT: THE WINNER IS " + winner.toUpperCase();
+      if (winner === "TIE") {
+         winnerStatement = "RESULT: TIE GAME";
+      } else {
+  		  winnerStatement = "RESULT: THE WINNER IS " + winner.toUpperCase();
+      }
   	} else {
   		winnerStatement = "IN PROGRESS";
   	}

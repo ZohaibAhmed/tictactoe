@@ -20304,9 +20304,13 @@ var Menu = React.createClass({displayName: "Menu",
   render: function() {
   	var winner = TicTacToeStore.getWinner();
   	var winnerStatement;
-
+    
   	if (winner) {
-  		winnerStatement = "RESULT: THE WINNER IS " + winner.toUpperCase();
+      if (winner === "TIE") {
+         winnerStatement = "RESULT: TIE GAME";
+      } else {
+  		  winnerStatement = "RESULT: THE WINNER IS " + winner.toUpperCase();
+      }
   	} else {
   		winnerStatement = "IN PROGRESS";
   	}
@@ -20355,7 +20359,7 @@ var TicTacToe = React.createClass({displayName: "TicTacToe",
   },
 
   tileClick: function(position, player) {
-    if (!TicTacToeStore.isOccupied(position) && !TicTacToeStore.getWinner()) {
+    if (!TicTacToeStore.isOccupied(position) && !TicTacToeStore.getWinner() && TicTacToeStore.getPlayer() == 'x') {
       TicTacToeActions.playPosition(position); // play position
       this.setState({tiles: TicTacToeStore.getBoard(), currentPlayer: TicTacToeStore.getPlayer()});
       TicTacToeActions.getOpponentMove(TicTacToeStore.getBoard()); // get opponent move

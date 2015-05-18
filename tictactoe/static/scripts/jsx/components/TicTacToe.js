@@ -26,7 +26,7 @@ var TicTacToe = React.createClass({
   },
 
   tileClick: function(position, player) {
-    if (!TicTacToeStore.isOccupied(position) && !TicTacToeStore.getWinner() && currentPlayer == 'x') {
+    if (!TicTacToeStore.isOccupied(position) && !TicTacToeStore.getWinner() && TicTacToeStore.getPlayer() == 'x') {
       TicTacToeActions.playPosition(position); // play position
       this.setState({tiles: TicTacToeStore.getBoard(), currentPlayer: TicTacToeStore.getPlayer()});
       TicTacToeActions.getOpponentMove(TicTacToeStore.getBoard()); // get opponent move
